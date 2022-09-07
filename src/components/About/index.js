@@ -9,7 +9,7 @@ function About() {
       <Row>
         <Col xs={12} md={4} lg={3} className="justify-content-center mb-3">
           <img
-            src={require("/Users/Anthony/Desktop/challenges/20-Challenge/Portfolio_Paige/react-portfolio/src/assets/images/project/weddingdate.jpg")}
+            src={require("/Users/Anthony/Desktop/challenges/20-Challenge/Portfolio_Paige/src/assets/images/project/weddingdate.jpg")}
             alt="Paige Caiozzo"
             className="border border-dark "
           />
