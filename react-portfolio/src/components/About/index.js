@@ -1,33 +1,30 @@
 import React from "react";
-import self from "../../assets/images/beach.jpg";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 function About() {
   return (
-    <section className="flex flex-wrap justify-center">
-      <div className="text-2xl w-1/2 mt-10 ml-10">
-        <h1
-          id="about"
-          className="text-4xl md:mt-24 first-letter:font-windsong first-letter:text-7xl"
-        >
-          H i, I'm Paige Caiozzo.
-        </h1>
-        <p className="mt-12">
-          I am currently a student at Michigan State University Coding Bootcamp.
-        </p>
-        <p className="mt-6">
-          Starting this fall I will have completed a full-stack developer bootcamp to obtain
-          critical skills to meet future demands.
-        </p>
-        <p className="mt-6">
-          I am currently 33 years old, married to my amazing husband Anthony for 5 years and I have three beautiful children. 
-        </p>
-      </div>
-      <img
-        src={self}
-        alt="self"
-        className="h-80 opacity-80 md:mt-40 ml-12 flex align-bottom"
-      ></img>
-    </section>
+    <Container className="align-self-center mt-3 mt-md-0 " id="about">
+      <Row>
+        <Col xs={12} md={4} lg={3} className="justify-content-center mb-3">
+          <img
+            src={require("/Users/Anthony/Desktop/challenges/20-Challenge/Portfolio_Paige/react-portfolio/src/assets/images/project/weddingdate.jpg")}
+            alt="Paige Caiozzo"
+            className="border border-dark "
+          />
+        </Col>
+        <Col xs={12} md={8} lg={7}>
+          <h2 className="aboutme">About Me</h2>
+          <p className="aboutmeinfo">
+            <p className="hello">Hello,</p><p className="name">My name is Paige. </p>I am a
+            Michigan State University Coding Bootcamp student. I am currently 33
+            years old. I have been married to my husband for 5 years and we have
+            3 amazing children together!
+          </p>
+        </Col>
+      </Row>
+    </Container>
   );
 }
 

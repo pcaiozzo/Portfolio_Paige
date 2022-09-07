@@ -1,72 +1,41 @@
 import React, { useEffect } from "react";
-import { capitalizeFirstLetter } from "../../utils/helpers";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import { capitalizeFirstLetter } from "../utils/helpers";
+import pdf from "/Users/Anthony/Desktop/challenges/20-Challenge/Portfolio_Paige/react-portfolio/src/assets/images/Resume(2).pdf";
 
 function Navigation(props) {
-  const { setCurrentComponent, currentComponent } = props;
+  const { pages = [], currentPage, setCurrentPage } = props;
 
   useEffect(() => {
-    document.title = capitalizeFirstLetter(currentComponent);
-  }, [currentComponent]);
-
+    document.title = capitalizeFirstLetter(currentPage.name);
+  });
   return (
-    <header>
-      <nav className="bg-white text-black">
-        <ul className="flex flex-wrap justify-between align-center list-none mt-6 pb-6 mx-24 font-bold text-4xl font-shalimar">
-          <h1 className="text-5xl xs:mb-4 md:mb-0 font-windsong">
-            <a
-              data-testid="link"
-              href="#home"
-              className="hover:opacity-60"
-              onClick={() => setCurrentComponent("about")}
-            >
-              Paige Caiozzo
-            </a>
-          </h1>
-          <div className="xs:pt-2 flex flex-wrap">
-            <li className="mx-6">
-              <a
-                data-testid="about"
-                href="#about"
-                onClick={() => setCurrentComponent("about")}
-                className="hover:text-orange-500"
-              >
-                About Me
-              </a>
-            </li>
-            <li className="mx-6">
-              <a
-                data-testid="contact"
-                href="#contact"
-                onClick={() => setCurrentComponent("contact")}
-                className="hover:text-orange-500"
-              >
-                Contact
-              </a>
-            </li>
-            <li className="mx-6">
-              <a
-                data-testid="resume"
-                href="#resume"
-                onClick={() => setCurrentComponent("resume")}
-                className="hover:text-orange-500"
-              >
-                Resume
-              </a>
-            </li>
-            <li className="mx-6">
-              <a
-                data-testid="project"
-                href="#project"
-                onClick={() => setCurrentComponent("project")}
-                className="hover:text-orange-500"
-              >
-                Projects
-              </a>
-            </li>
-          </div>
-        </ul>
-      </nav>
-    </header>
+    <Navbar expand="md" bg="dark" variant="dark">
+      <Container>
+        <Navbar.Brand
+          onClick={window.location.reload}
+          href="."
+          className="d-none d-md-inline"
+        >
+          Home
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            {pages.map((page) => (
+              <Nav.Link key={page.name} onClick={() => setCurrentPage(page)}>
+                {capitalizeFirstLetter(page.name)}
+              </Nav.Link>
+            ))}
+            <Nav.Link key="resume" href={pdf} target="_blank" rel="noreferrer">
+              Resume
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 }
 
