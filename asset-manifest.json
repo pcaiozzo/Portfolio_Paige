@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Portfolio_Paige/static/css/main.04c2ad00.css",
+    "main.js": "/Portfolio_Paige/static/js/main.662d199d.js",
+    "static/js/787.a2cb61a6.chunk.js": "/Portfolio_Paige/static/js/787.a2cb61a6.chunk.js",
+    "static/media/weddingdate.jpg": "/Portfolio_Paige/static/media/weddingdate.7a0ea939a6668a59d7d3.jpg",
+    "static/media/Resume(2).pdf": "/Portfolio_Paige/static/media/Resume(2).48581f9a030ead9d1708.pdf",
+    "index.html": "/Portfolio_Paige/index.html",
+    "main.04c2ad00.css.map": "/Portfolio_Paige/static/css/main.04c2ad00.css.map",
+    "main.662d199d.js.map": "/Portfolio_Paige/static/js/main.662d199d.js.map",
+    "787.a2cb61a6.chunk.js.map": "/Portfolio_Paige/static/js/787.a2cb61a6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.04c2ad00.css",
+    "static/js/main.662d199d.js"
+  ]
+}
