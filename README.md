@@ -3,13 +3,16 @@
 
 ## Description
 
-I created a professional portfolio to display all of my current and upcoming work. The webpage has photos, links to sections and a display of work. I used HTML, CSS and JavaScript in the recent projects.
+I created a react portfolio to be able to display all of my work. There is links for my projeects, about me, contact information and for my resume.
 
 
 ## Deployment link
 
-https://pcaiozzo.github.io/PortfolioPaige/
+https://pcaiozzo.github.io/Portfolio_Paige/
 
 ## Screenshot
 
-![Screenshot]()
+![Screenshot](./src/assets/images/project/Screenshot.jpg)
+
+## Questions 
+Contact me with any questions: [email: paigecaiozzo@gmail.com](mailto:paigecaiozzo@gmaill.com) , [GitHub: pcaiozzo](https://github.com/pcaiozzo)<br />
